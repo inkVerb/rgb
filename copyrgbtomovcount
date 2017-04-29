@@ -1,7 +1,14 @@
 #!/bin/bash
 # Note, we don't use /bin/sh, we need /bin/bash because of the counter
 
-# This renames files for the rgb-panel-mov folder of .png files to have
+# This renames files for the rgb-panel-mov folder of .png files to prepare them to be used in making the video.
+
+
+# Check dependency directory
+if [ ! -d rgb-panel-mov ]; then
+echo "rgb-panel-mov directory does not exist. Run copyrgbtomovall according to instructions first, then try again."
+exit 11
+fi
 
 # Set a counter
 CNT=1
@@ -46,3 +53,4 @@ rename s/N/0/ rgb-panel-mov/*.png
 
 # Everything is finished. Let's echo a happy message.
 echo "All renamed and ready to make videos. We are happy!"
+

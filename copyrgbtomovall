@@ -3,6 +3,13 @@
 
 #This copies existing files in the rgb-panel folder into the numbered order used in this video example.
 
+
+# Check dependency directory
+if [ ! -d rgb-panel ]; then
+echo "rgb-panel directory has not been created. Run makergball according to instructions first, then try again."
+exit 11
+fi
+
 # Black
 R=0
 G=0

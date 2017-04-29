@@ -1,6 +1,13 @@
 #!/bin/sh
 # Note, we can simply use /bin/sh because these are all if-then, variables, and shell commands, there isn't any complex arithmatic.
 
+# This is used by copyrgbtomovall to create and populate the rgb-panel-mov directory.
+## This is generally not intended to be used by itself since it creates many files in a sequence.
+## To use this without copyrgbtomovall, use a script similar to copyrgbtomovall.
+
+# Set errors to break looping scripts
+set -e
+
 # Dependencies:
 ## Folders: rgb-panel (as created via scripts), rgb-mov-panel (empty, to put resulting files)
 
@@ -17,3 +24,4 @@ fi
 # RGB final panel
 ## (We add "N" to the front of the file for replacing the names afterward.)
 cp rgb-panel/RGB-panel-$R-$G-$B.png rgb-panel-mov/N$CNT.png
+

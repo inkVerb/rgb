@@ -1,14 +1,36 @@
 #!/bin/sh
 # Note, we can simply use /bin/sh because these are all if-then, variables, and shell commands, there isn't any complex arithmatic.
 
+# This is used by makergball to create and populate directories, ultimately resulting in the rgb-panel folder.
+
+# Set errors to break looping scripts
+set -e
+
 # Dependencies:
-## Folders: bin (downloaded), colors (created from octave scripts)
+## Folders: bin (downloaded, unzipped), colors (populated from Octave Scripts)
+
+# How to use:
+## ./makergb [red dec number] [green dec number] [blue dec number]
+
+# Eg:
+## ./makergb 5 22 254
+
 
 R=$1
 G=$2
 B=$3
 
-# Create dirs
+# Check dependency directories
+if [ ! -d bin ]; then
+echo "bin directory does not exist. Unzip bin.zip from the inkVerb/rgb repo then try again."
+exit 11
+fi
+if [ ! -d colors ]; then
+echo "colors directory does not exist. Unzip bin.zip from the inkVerb/rgb repo then try again."
+exit 11
+fi
+
+# Create directories if they don't exist
 if [ ! -d rgb-bin ]; then
 mkdir rgb-bin
 fi
@@ -31,3 +53,4 @@ rm rgb-base/RGB-base1-$R-$G-$B.png
 
 # RGB final
 composite rgb-base/RGB-base-$R-$G-$B.png colors/R$R-G$G-B$B.png rgb-panel/RGB-panel-$R-$G-$B.png
+
