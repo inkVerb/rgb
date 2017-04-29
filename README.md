@@ -14,7 +14,7 @@ sudo apt install octave ffmpeg git kdenlive
 
 ## Clone the Repo
 
-`git clone https://github.com/inkVerb/rgbvid`
+`git clone https://github.com/inkVerb/rgb`
 
 ## Make sure you are working inside the folder
 
