@@ -16,11 +16,17 @@ git clone https://github.com/inkVerb/vubuntu-info
 cd rgbvid
 
 ## Unzip all the libraries
+
 `unzip bin.zip`
+
 `unzip alpha-wheel.zip`
+
 Cleanup
+
 `rm bin.zip`
+
 `rm alpha-wheel.zip`
+
 
 ## Create the solid color images using Octave
 1. Open Octave from your desktop menu.
@@ -38,10 +44,10 @@ Run:
 `./makergball`
 
 Dependencies, folder and files:
+
 - `colors/` must be populated from the Octave scripts.
 - `bin/` must be downloaded and unzipped.
 - `makergb` is used by `makergball`
-
 - `rgb-bin/` contains raw R - G - B .png transparencies that need to be composited with the panel frame.
 - `rgb-base/` contains the R-G-B transparencies from `rgb-bin/` composited with the panel frame, but have no solid colors.
 - `rgb-panel/` contains the R-G-B panel composites from `rgb-base/` AND has the solid colors on the left.
@@ -54,53 +60,71 @@ Copy and order the `rbg-panel/` files to be created by `ffmpeg`
 ...but the files have only been populated in `rgb-panel-mov/`. They need to be ordered by numbers that `ffmpeg` can recognize.
 
 2. Run:
+
 `./copyrgbtomovcount`
 ...Now the files in have been renamed by a number order that `ffmpeg` can recognize.
 Use "Create the videos" below for 
 
 ## Real Colors for video
 1. Composite the color wheel on top of the solid colors
+
 Run:
+
 `./realwheelcolors`
 
 Dependency folders for `realwheelcolors`:
+
 - `alpha-wheel/` (downloaded)
 - `colors/` (created from Octave scripts for Real Colors)
 
 *Note: This is a bit tricky because there are only 360 hue levels displayed on the wheel, but there are 1123 levels of color to apply to them. This script matches them correctly.*
 
 2. Composite the wheel-color images with the R-G-B panel
+
 Run:
+
 `./realwheelpanel`
 
 Dependency folders for `realwheelpanel`:
+
 - `alpha-wheel/` (downloaded)
 - `rgb-panels/` (created from makergball, see dependencies)
 
 ## Create the videos wtih ffmpeg
+
 PNG files are ready for `ffmpeg` to create videos with them in these folders:
+
 - `rgb-panel-mov/`
 - `colors-real-wheel-mov/`
 - `colors-real-wheel-panel-mov/`
 
 Enter these with:
+
 `cd rgb-panel-mov`
+
 ...etc.
 
 Once the -mov directories are created and populated, use this from the terminal inside that folder to create the video:
 
 `ffmpeg -y -framerate 30 -i %5d.png  -c:v libx264 -s:v 1920:1080 moviename.mp4`
+
 *Note that "%5d" means "any 5-digit number" such as "00001". We created all movie-ready .png files with 5 digits so that this simgle ffmpeg command would work with all of them. However, you can use any digit length as long as they match. ffmpeg will ignore any fies with different digit length than specified here.*
 After it finishes, it's easy to just move the file to the parent directory at `rgbvid/`
+
 `mv *.mp4 ../`
+
 Then go up one directory to see your video:
+
 `cd ..`
+
 Open it by double clicking on it in your file brower.
 
 *ffmpeg can also be finnicky when converting images into video, or with anything. If you see "drop" in the messages then it's skipping .png files because you have the wrong settings. Here are a few other examples that should work, as well as the source of help after hours of trying to solve this problem myself:*
-`ffmpeg -y -framerate 30 -i Rplot%d.png  -c:v libx264 30f.mp4`
-`ffmpeg -y -framerate 30 -r 30 -i Rplot%d.png -c:v libx264 30fr.mp4`
-`ffmpeg -y -r 30 -i Rplot%d.png -c:v libx264 30r.mp4`
+
+- `ffmpeg -y -framerate 30 -i Rplot%d.png  -c:v libx264 30f.mp4`
+- `ffmpeg -y -framerate 30 -r 30 -i Rplot%d.png -c:v libx264 30fr.mp4`
+- `ffmpeg -y -r 30 -i Rplot%d.png -c:v libx264 30r.mp4`
+
 Thanks Yi Hui! [https://github.com/yihui/animation/issues/74]
 
 ## Notes:
