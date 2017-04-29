@@ -1,0 +1,354 @@
+# RGB Solids
+
+## R 0-255 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,1)=i;
+imwrite(Type1,['R' int2str(i) '-G0-B0.png'])
+end
+
+#####
+
+## G 0-255 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,2)=i;
+imwrite(Type1,['R0-G' int2str(i) '-B0.png'])
+end
+
+#####
+
+## B 0-255 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,3)=i;
+imwrite(Type1,['R0-G0-B' int2str(i) '.png'])
+end
+
+#####
+
+
+# Absolute Spectrum
+
+## R 255, G 0-255 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,1)=255;
+Type1(:,:,2)=i;
+imwrite(Type1,['R255-G' int2str(i) '-B0.png'])
+end
+
+#####
+
+## R 0-255, G 255  ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,1)=i;
+Type1(:,:,2)=255;
+imwrite(Type1,['R' int2str(i) '-G255-B0.png'])
+end
+
+#####
+
+## G 255, B 0-255 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,2)=255;
+Type1(:,:,3)=i;
+imwrite(Type1,['R0-G255-B' int2str(i) '.png'])
+end
+
+#####
+
+## G 0-255, B 255  ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,2)=i;
+Type1(:,:,3)=255;
+imwrite(Type1,['R0-G' int2str(i) '-B255.png'])
+end
+
+#####
+
+## B 255, R 0-255 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,1)=i;
+Type1(:,:,3)=255;
+imwrite(Type1,['R' int2str(i) '-G0-B255.png'])
+end
+
+#####
+
+## B 0-255, R 255 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,1)=255;
+Type1(:,:,3)=i;
+imwrite(Type1,['R255-G0-B' int2str(i) '.png'])
+end
+
+#####
+
+# Gray Spectrum
+
+## R 0-255, G 0-255, B 0-255 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=0:255
+Type1(:,:,1)=i;
+Type1(:,:,2)=i;
+Type1(:,:,3)=i;
+imwrite(Type1,['R' int2str(i) '-G' int2str(i) '-B' int2str(i) '.png'])
+end
+
+#####
+
+
+# Real Colors ##
+
+## G 34-221, R 221, B 34 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=34:221
+Type1(:,:,1)=221;
+Type1(:,:,2)=i;
+Type1(:,:,3)=34;
+imwrite(Type1,['R221-G' int2str(i) '-B34.png'])
+end
+
+#####
+
+## R 34-221, G 221, B 34  ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=34:221
+Type1(:,:,1)=i;
+Type1(:,:,2)=221;
+Type1(:,:,3)=34;
+imwrite(Type1,['R' int2str(i) '-G221-B34.png'])
+end
+
+#####
+
+## B 34-221, R 34, G 221 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=34:221
+Type1(:,:,1)=34;
+Type1(:,:,2)=221;
+Type1(:,:,3)=i;
+imwrite(Type1,['R34-G221-B' int2str(i) '.png'])
+end
+
+#####
+
+## G 34-221, R 34 B 221  ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=34:221
+Type1(:,:,1)=34;
+Type1(:,:,2)=i;
+Type1(:,:,3)=221;
+imwrite(Type1,['R34-G' int2str(i) '-B221.png'])
+end
+
+#####
+
+## R 34-221, G 34, B 221 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=34:221
+Type1(:,:,1)=i;
+Type1(:,:,2)=34;
+Type1(:,:,3)=221;
+imwrite(Type1,['R' int2str(i) '-G34-B221.png'])
+end
+
+#####
+
+## B 34-221, R 221, G 34 ####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=34:221
+Type1(:,:,1)=221;
+Type1(:,:,2)=34;
+Type1(:,:,3)=i;
+imwrite(Type1,['R221-G34-B' int2str(i) '.png'])
+end
+
+#####
+
+## R 1-254, G 225, B 225####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=1:254
+Type1(:,:,1)=i;
+Type1(:,:,2)=255;
+Type1(:,:,3)=255;
+imwrite(Type1,['R' int2str(i) '-G255-B255.png'])
+end
+
+#####
+
+## G 1-254, R 225, B 225####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=1:254
+Type1(:,:,1)=255;
+Type1(:,:,2)=i;
+Type1(:,:,3)=255;
+imwrite(Type1,['R255-G' int2str(i) '-B255.png'])
+end
+
+#####
+
+## B 1-254, R 225, G 225####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=1:254
+Type1(:,:,1)=255;
+Type1(:,:,2)=255;
+Type1(:,:,3)=i;
+imwrite(Type1,['R255-G255-B' int2str(i) '.png'])
+end
+
+#####
+
+## G 34-221, R 221, B 221####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=35:221
+Type1(:,:,1)=221;
+Type1(:,:,2)=i;
+Type1(:,:,3)=221;
+imwrite(Type1,['R221-G' int2str(i) '-B221.png'])
+end
+
+#####
+
+## R 34-221, B 34-221, G 34####
+clc
+clear all
+close all
+%%
+Image=zeros(1080,1920,3);
+Type1=uint8(Image);
+
+for i=35:220
+Type1(:,:,1)=i;
+Type1(:,:,2)=34;
+Type1(:,:,3)=i;
+imwrite(Type1,['R' int2str(i) '-G34-B' int2str(i) '.png'])
+end
+
+#####

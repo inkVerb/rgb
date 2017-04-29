@@ -1,0 +1,224 @@
+#!/bin/bash
+# Note, we don't use /bin/sh, we need /bin/bash because of the while-do loop and the counter
+
+# R G B ##
+
+# Black
+R=0
+G=0
+B=0
+./makergb $R $G $B
+
+# Gray scale ##
+A=0
+while [ $A -le 255 ]
+do
+./makergb $A $A $A
+((A++))
+done
+
+# Red
+R=1
+G=0
+B=0
+while [ $R -le 255 ]
+do
+./makergb $R $G $B
+((R++))
+done
+
+# Green
+R=0
+G=1
+B=0
+while [ $G -le 255 ]
+do
+./makergb $R $G $B
+((G++))
+done
+
+# Blue
+R=0
+G=0
+B=1
+while [ $B -le 255 ]
+do
+./makergb $R $G $B
+((B++))
+done
+
+# White > Cyan
+R=1
+G=255
+B=255
+while [ $R -le 254 ]
+do
+./makergb $R $G $B
+((R++))
+done
+
+# White > Magenta
+R=255
+G=1
+B=255
+while [ $G -le 254 ]
+do
+./makergb $R $G $B
+((G++))
+done
+
+# White > Yellow
+R=255
+G=255
+B=1
+while [ $B -le 254 ]
+do
+./makergb $R $G $B
+((B++))
+done
+
+# Red > Yellow
+R=255
+G=1
+B=0
+while [ $G -le 255 ]
+do
+./makergb $R $G $B
+((G++))
+done
+
+# Yellow > Green
+R=1
+G=255
+B=0
+while [ $R -le 255 ]
+do
+./makergb $R $G $B
+((R++))
+done
+
+# Green > Cyan
+R=0
+G=255
+B=1
+while [ $B -le 255 ]
+do
+./makergb $R $G $B
+((B++))
+done
+
+# Cyan > Blue
+R=0
+G=1
+B=255
+while [ $G -le 255 ]
+do
+./makergb $R $G $B
+((G++))
+done
+
+# Blue > Magenta
+R=1
+G=0
+B=255
+while [ $R -le 255 ]
+do
+./makergb $R $G $B
+((R++))
+done
+
+# Magenta > Red
+R=255
+G=0
+B=1
+while [ $B -le 255 ]
+do
+./makergb $R $G $B
+((B++))
+done
+
+
+# Real Colors ##
+
+# Red > Yellow
+R=221
+G=34
+B=34
+while [ $G -le 221 ]
+do
+./makergb $R $G $B
+((G++))
+done
+
+# Yellow > Green
+R=34
+G=221
+B=34
+while [ $R -le 221 ]
+do
+./makergb $R $G $B
+((R++))
+done
+
+# Green > Cyan
+R=34
+G=221
+B=34
+while [ $B -le 221 ]
+do
+./makergb $R $G $B
+((B++))
+done
+
+# Cyan > Blue
+R=34
+G=34
+B=221
+while [ $G -le 221 ]
+do
+./makergb $R $G $B
+((G++))
+done
+
+# Blue > Magenta
+R=34
+G=34
+B=221
+while [ $R -le 221 ]
+do
+./makergb $R $G $B
+((R++))
+done
+
+# Magenta > Red
+R=221
+G=34
+B=34
+while [ $B -le 221 ]
+do
+./makergb $R $G $B
+((B++))
+done
+
+# 222222 > Real Magenta
+R=35
+G=34
+B=35
+while [ $R -le 221 ]
+do
+./makergb $R $G $B
+((B++))
+((R++))
+done
+
+# Real Magenta > DDDDDD
+R=221
+G=35
+B=221
+while [ $G -le 221 ]
+do
+./makergb $R $G $B
+((G++))
+done
+
+

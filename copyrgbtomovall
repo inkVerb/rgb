@@ -1,0 +1,658 @@
+#!/bin/bash
+# Note, we don't use /bin/sh, we need /bin/bash because of the while-do loop and the counter
+
+#This copies existing files in the rgb-panel folder into the numbered order used in this video example.
+
+# Black
+R=0
+G=0
+B=0
+CNT=1
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+
+# Green UP
+R=0
+G=0
+B=0
+while [ $G -le 15 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((G++))
+((CNT++))
+done
+
+R=0
+G=15
+B=0
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+
+# Green UP
+R=0
+G=16
+B=0
+while [ $G -le 255 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((G++))
+((CNT++))
+done
+
+# Green DN
+R=0
+G=255
+B=0
+while [ $G -gt 0 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((G--))
+((CNT++))
+done
+
+# Red UP
+R=0
+G=0
+B=0
+while [ $R -le 255 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((R++))
+((CNT++))
+done
+
+# Red DN
+R=255
+G=0
+B=0
+while [ $R -gt 0 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((R--))
+((CNT++))
+done
+
+# Blue UP
+R=0
+G=0
+B=0
+while [ $B -le 255 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((B++))
+((CNT++))
+done
+
+# Blue DN
+R=0
+G=0
+B=255
+while [ $B -gt 0 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((B--))
+((CNT++))
+done
+
+# Black > White
+A=0
+while [ $A -le 255 ]
+do
+./copyrgbtomov $A $A $A $CNT
+((A++))
+((CNT++))
+done
+
+
+# White > Cyan
+R=255
+G=255
+B=255
+while [ $R -gt 0 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((R--))
+((CNT++))
+done
+
+# Cyan > White
+R=0
+G=255
+B=255
+while [ $R -le 255 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((R++))
+((CNT++))
+done
+
+# White > Yellow
+R=255
+G=255
+B=255
+while [ $B -gt 0 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((B--))
+((CNT++))
+done
+
+# Cyan > White
+R=255
+G=255
+B=0
+while [ $B -le 255 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((B++))
+((CNT++))
+done
+
+# White > Magenta
+R=255
+G=255
+B=255
+while [ $G -gt 0 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((G--))
+((CNT++))
+done
+
+# Magenta > Red
+R=255
+G=0
+B=255
+while [ $B -gt 0 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((B--))
+((CNT++))
+done
+
+# Red > Yellow
+R=255
+G=0
+B=0
+while [ $G -le 255 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((G++))
+((CNT++))
+done
+
+# Yellow > Green
+R=255
+G=255
+B=0
+while [ $R -gt 0 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((R--))
+((CNT++))
+done
+
+# Green > Cyan
+R=0
+G=255
+B=0
+while [ $B -le 255 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((B++))
+((CNT++))
+done
+
+# Cyan > Blue
+R=0
+G=255
+B=255
+while [ $G -gt 0 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((G--))
+((CNT++))
+done
+
+# Blue > Magenta
+R=0
+G=0
+B=255
+while [ $R -le 255 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((R++))
+((CNT++))
+done
+
+# Magenta > White
+R=255
+G=0
+B=255
+while [ $G -le 255 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((G++))
+((CNT++))
+done
+
+# White > 222222
+A=255
+while [ $A -gt 34 ]
+do
+./copyrgbtomov $A $A $A $CNT
+((A--))
+((CNT++))
+done
+
+# 222222 > Real Magenta
+R=34
+G=34
+B=34
+while [ $R -le 221 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((R++))
+((B++))
+((CNT++))
+done
+
+R=221
+G=34
+B=221
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+./copyrgbtomov $R $G $B $CNT
+((CNT++))
+
+# Real Magenta > DDDDDD
+R=221
+G=34
+B=221
+while [ $G -le 221 ]
+do
+./copyrgbtomov $R $G $B $CNT
+((G++))
+((CNT++))
+done
+
+# DDDDDD > White
+A=222
+while [ $A -le 255 ]
+do
+./copyrgbtomov $A $A $A $CNT
+((A++))
+((CNT++))
+done
+
+A=255
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+
+# Bow DN
+A=255
+while [ $A -gt 240 ]
+do
+./copyrgbtomov $A $A $A $CNT
+((A--))
+((CNT++))
+done
+
+# Bow UP
+A=241
+while [ $A -le 255 ]
+do
+./copyrgbtomov $A $A $A $CNT
+((A++))
+((CNT++))
+done
+
+A=255
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+((CNT++))
+./copyrgbtomov $A $A $A $CNT
+

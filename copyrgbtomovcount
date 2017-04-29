@@ -1,0 +1,48 @@
+#!/bin/bash
+# Note, we don't use /bin/sh, we need /bin/bash because of the while-do loop and the counter
+
+# This renames files for the rgb-panel-mov folder of .png files to have
+
+# Set a counter
+CNT=1
+
+# .png files N1-N0 first.
+while [ $CNT -le 9 ]; do
+rename s/N/N000/ rgb-panel-mov/N$CNT.png
+## Move the counter up one
+((CNT++))
+done
+
+# (N1-N9 are now N0001-N0009)
+
+# Reset the counter to the new level, for clarity and certainty
+CNT=10
+
+# .png files N01-N99.
+while [ $CNT -le 99 ]; do
+rename s/N/N00/ rgb-panel-mov/N$CNT.png
+## Move the counter up one
+((CNT++))
+done
+
+# (N10-N99 are now N0010-N0099)
+
+# Reset the counter to the new level, for clarity and certainty
+CNT=100
+
+# .png files N01-N99.
+while [ $CNT -le 999 ]; do
+rename s/N/N0/ rgb-panel-mov/N$CNT.png
+## Move the counter up one
+((CNT++))
+done
+
+# (N100-N999 are now N0100-N0999)
+
+# Finally, replace "N" with "0" so the "N" is now gone for ever and always and always.
+rename s/N/0/ rgb-panel-mov/*.png
+
+# (N0001-N1124 are now 00001-01124)
+
+# Everything is finished. Let's echo a happy message.
+echo "All renamed and ready to make videos. We are happy!"
