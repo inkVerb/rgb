@@ -1,5 +1,5 @@
 #!/bin/bash
-# Note, we don't use /bin/sh, we need /bin/bash because of the while-do loop and the counter
+# Note, we don't use /bin/sh, we need /bin/bash because of the counter
 
 #This copies existing files in the rgb-panel folder into the numbered order used in this video example.
 

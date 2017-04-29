@@ -6,7 +6,7 @@ Create R-G-B videos as seen on the inkVerb YouTube channel!
 
 This folder/repo contains scripts and libraries to composite and fill the folders with number-ordered .png files for conversion to video.
 
-Look inside every script to see what is going on.
+Look inside every script to see what is going on. The most-detailed explanation script is `copyrgbtomovcount`.
 
 ## Install any dependencies for this project
 
