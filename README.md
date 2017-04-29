@@ -1,19 +1,24 @@
 # RGBvid
+
 Create R-G-B videos as seen on the inkVerb YouTube channel!
 
 ## What is this?
+
 This folder/repo contains scripts and libraries to composite and fill the folders with number-ordered .png files for conversion to video.
 
 Look inside every script to see what is going on.
 
 ## Install any dependencies for this project
+
 sudo apt install octave ffmpeg git kdenlive
 
 ## Clone the Repo
-git clone https://github.com/inkVerb/vubuntu-info
+
+`git clone https://github.com/inkVerb/rgbvid`
 
 ## Make sure you are working inside the folder
-cd rgbvid
+
+`cd rgbvid`
 
 ## Unzip all the libraries
 
@@ -29,6 +34,7 @@ Cleanup
 
 
 ## Create the solid color images using Octave
+
 1. Open Octave from your desktop menu.
 
 2. Run the scripts in `Octave Scripts`.
@@ -38,6 +44,7 @@ Dependency folder for the Octave SCripts:
 - `colors/` (This must be your working directory in Octave!)
 
 ## Create the R-G-B panel
+
 This uses the `bin` libraries of individual R, G, and B to create panels to composite on top of solid colors
 
 Run:
@@ -53,8 +60,11 @@ Dependencies, folder and files:
 - `rgb-panel/` contains the R-G-B panel composites from `rgb-base/` AND has the solid colors on the left.
 
 ## R-G-B video
+
 Copy and order the `rbg-panel/` files to be created by `ffmpeg`
+
 1. Run:
+
 `./copyrgbtomovall`
 
 ...but the files have only been populated in `rgb-panel-mov/`. They need to be ordered by numbers that `ffmpeg` can recognize.
@@ -62,10 +72,13 @@ Copy and order the `rbg-panel/` files to be created by `ffmpeg`
 2. Run:
 
 `./copyrgbtomovcount`
+
 ...Now the files in have been renamed by a number order that `ffmpeg` can recognize.
+
 Use "Create the videos" below for 
 
 ## Real Colors for video
+
 1. Composite the color wheel on top of the solid colors
 
 Run:
@@ -109,6 +122,7 @@ Once the -mov directories are created and populated, use this from the terminal 
 `ffmpeg -y -framerate 30 -i %5d.png  -c:v libx264 -s:v 1920:1080 moviename.mp4`
 
 *Note that "%5d" means "any 5-digit number" such as "00001". We created all movie-ready .png files with 5 digits so that this simgle ffmpeg command would work with all of them. However, you can use any digit length as long as they match. ffmpeg will ignore any fies with different digit length than specified here.*
+
 After it finishes, it's easy to just move the file to the parent directory at `rgbvid/`
 
 `mv *.mp4 ../`
@@ -128,6 +142,7 @@ Open it by double clicking on it in your file brower.
 Thanks Yi Hui! [https://github.com/yihui/animation/issues/74]
 
 ## Notes:
+
 1. The video from `colors-real-wheel-mov/` is not part of the original video at the Ink Is A Verb YouTube Channel.
 2. The video from `colors-real-wheel-panel-mov/` must be inserted into the video from `rgb-panel-mov/`. Do this at about 10 seconds before the end of the `rgb-panel-mov/` video, when the numbers briefly pause at DD22DD. Use an editor such as Kdenlive for this. And, you must create a video file with 1080 pixels and 30 fps because that is what these videos are.
 3. I also made additional edits to the final video on YouTube. I simply inserted some images from the video directories (above) in Kdenlive to make the panel seem to pause.
