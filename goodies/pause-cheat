@@ -1,0 +1,54 @@
+#!/bin/sh
+
+cd ..
+mkdir rgb-vid-pauses
+cp rgb-panel/RGB-panel-221-81-34.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-221-128-34.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-174-34.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-221-221-34.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-221-174-34.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-174-221-34.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-128-221-34.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-81-221-34.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-221-34.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-221-81.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-221-128.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-221-174.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-221-221.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-174-221.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-128-221.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-81-221.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-34-34-221.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-81-34-221.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-128-34-221.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-174-34-221.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-221-34-221.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-221-34-174.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-221-34-128.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-221-34-81.png rgb-vid-pauses/
+cp rgb-panel/RGB-panel-221-34-34.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00001.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00048.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00096.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00141.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00188.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00235.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00282.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00328.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00375.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00422.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00468.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00515.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00562.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00609.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00656.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00702.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00749.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00796.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00842.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00889.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00936.png rgb-vid-pauses/
+cp colors-real-wheel-mov/00983.png rgb-vid-pauses/
+cp colors-real-wheel-mov/01030.png rgb-vid-pauses/
+cp colors-real-wheel-mov/01076.png rgb-vid-pauses/
+
