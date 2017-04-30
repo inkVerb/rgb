@@ -1,6 +1,7 @@
 # RGBvid
 
 Create R-G-B videos as seen on the inkVerb YouTube channel!
+https://www.youtube.com/watch?v=HX46ILgwTNk
 
 ## What is this?
 
