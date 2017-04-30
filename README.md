@@ -10,7 +10,7 @@ Look inside every script to see what is going on. The most-detailed explanation 
 
 ## Install any dependencies for this project
 
-sudo apt install octave ffmpeg git kdenlive
+`sudo apt install octave ffmpeg imagemagick git kdenlive`
 
 ## Clone the Repo
 
@@ -20,18 +20,11 @@ sudo apt install octave ffmpeg git kdenlive
 
 `cd rgbvid`
 
-## Unzip all the libraries
+## Play with the bubble wrap
 
-`unzip bin.zip`
+`chmod +x install`
 
-`unzip alpha-wheel.zip`
-
-Cleanup
-
-`rm bin.zip`
-
-`rm alpha-wheel.zip`
-
+`./install`
 
 ## Create the solid color images using Octave
 
@@ -58,6 +51,8 @@ Dependencies, folder and files:
 - `rgb-bin/` contains raw R - G - B .png transparencies that need to be composited with the panel frame.
 - `rgb-base/` contains the R-G-B transparencies from `rgb-bin/` composited with the panel frame, but have no solid colors.
 - `rgb-panel/` contains the R-G-B panel composites from `rgb-base/` AND has the solid colors on the left.
+
+*Note: You can do much more with layers. Most of this is done using* [ImageMagickⓇ][1]*, namely the* `composite` *command, as seen in* `makergb`*. You can use* `makergb` *by following the instructions in the file to make almost any of the 16 million + RGB combinations possible. This only creates rgb-panels that are used in this video.*
 
 ## R-G-B video
 
@@ -90,7 +85,7 @@ Dependency folders for `realwheelcolors`:
 - `alpha-wheel/` (downloaded)
 - `colors/` (created from Octave scripts for Real Colors)
 
-*Note: This is a bit tricky because there are only 360 hue levels displayed on the wheel, but there are 1123 levels of color to apply to them. This script matches them correctly.*
+*Note: This is a bit tricky because there are only 360 hue levels displayed on the wheel, but there are 1122 levels of color to apply to them. This script matches them correctly.*
 
 2. Composite the wheel-color images with the R-G-B panel
 
@@ -121,7 +116,7 @@ Once the -mov directories are created and populated, use this from the terminal 
 
 `ffmpeg -y -framerate 30 -i %5d.png  -c:v libx264 -s:v 1920:1080 moviename.mp4`
 
-*Note that "%5d" means "any 5-digit number" such as "00001". We created all movie-ready .png files with 5 digits so that this simgle ffmpeg command would work with all of them. However, you can use any digit length as long as they match. ffmpeg will ignore any fies with different digit length than specified here.*
+*Note: "%5d" means "any 5-digit number" such as "00001". We created all movie-ready .png files with 5 digits so that this simgle ffmpeg command would work with all of them. However, you can use any digit length as long as they match. ffmpeg will ignore any fies with different digit length than specified here.*
 
 After it finishes, it's easy to just move the file to the parent directory at `rgbvid/`
 
@@ -139,11 +134,19 @@ Open it by double clicking on it in your file brower.
 - `ffmpeg -y -framerate 30 -r 30 -i Rplot%d.png -c:v libx264 30fr.mp4`
 - `ffmpeg -y -r 30 -i Rplot%d.png -c:v libx264 30r.mp4`
 
-Thanks Yi Hui! [https://github.com/yihui/animation/issues/74]
+Thanks [Yi Hui!][2] [https://github.com/yihui/animation/issues/74]
 
 ## Notes:
 
 1. The video from `colors-real-wheel-mov/` is not part of the original video at the Ink Is A Verb YouTube Channel.
 2. The video from `colors-real-wheel-panel-mov/` must be inserted into the video from `rgb-panel-mov/`. Do this at about 10 seconds before the end of the `rgb-panel-mov/` video, when the numbers briefly pause at DD22DD. Use an editor such as Kdenlive for this. And, you must create a video file with 1080 pixels and 30 fps because that is what these videos are.
 3. I also made additional edits to the final video on YouTube. I simply inserted some images from the video directories (above) in Kdenlive to make the panel seem to pause.
+
+## Credits & Reference:
+
+- ImageMagickⓇ (`composite` command)
+[1]: https://www.imagemagick.org/script/index.php
+
+- Yi Hui (ffmpeg examples)
+[2]: https://github.com/yihui/animation/issues/74
 
