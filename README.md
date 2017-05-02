@@ -5,29 +5,33 @@ https://www.youtube.com/watch?v=HX46ILgwTNk
 
 ## What is this?
 
-This folder/repo contains scripts and libraries to composite and fill the folders with number-ordered .png files for conversion to video.
+The video was made entirely using Ubuntu.
 
-Look inside every script to see what is going on. The most-detailed explanation script is `copyrgbtomovcount`.
+This repo contains Bash scripts, libraries, and Ubuntu terminal commands to composite and fill the folders with number-ordered .png files for conversion to video.
 
-## Install any dependencies for this project
+Look inside every script to see what is going on. The script with the most-detailed explanation is `copyrgbtomovcount`.
+
+Here's how to do it...
+
+## I. Install any dependencies for this project
 
 `sudo apt install octave ffmpeg imagemagick git kdenlive`
 
-## Clone the Repo
+## II. Clone the Repo
 
 `git clone https://github.com/inkVerb/rgb`
 
-## Make sure you are working inside the folder
+## III. Make sure you are working inside the folder
 
 `cd rgb`
 
-## Play with the bubble wrap
+## IV. Play with the bubble wrap
 
 `chmod +x install`
 
 `./install`
 
-## Create the solid color images using Octave
+## V. Create the solid color images using Octave
 
 1. Open Octave from your desktop menu.
 
@@ -37,7 +41,7 @@ Run everything betwen hash comments.
 Dependency folder for the Octave SCripts:
 - `colors/` (This must be your working directory in Octave!)
 
-## Create the R-G-B panel
+## VI. Create the R-G-B panel
 
 This uses the `bin` libraries of individual R, G, and B to create panels to composite on top of solid colors
 
@@ -55,7 +59,7 @@ Dependencies, folder and files:
 
 *Note: You can do much more with layers. Most of this is done using* [ImageMagickⓇ][1]*, namely the* `composite` *command, as seen in* `makergb`*. You can use* `makergb` *by following the instructions in the file to make almost any of the 16 million + RGB combinations possible. This only creates rgb-panels that are used in this video.*
 
-## R-G-B video
+## VII. R-G-B video
 
 Copy and order the `rbg-panel/` files to be created by `ffmpeg`
 
@@ -73,7 +77,7 @@ Copy and order the `rbg-panel/` files to be created by `ffmpeg`
 
 Use "Create the videos" below for 
 
-## Real Colors for video
+## VIII. eal Colors for video
 
 1. Composite the color wheel on top of the solid colors
 
@@ -99,7 +103,7 @@ Dependency folders for `realwheelpanel`:
 - `alpha-wheel/` (downloaded)
 - `rgb-panels/` (created from makergball, see dependencies)
 
-## Create the videos wtih ffmpeg
+## IX. Create the videos wtih ffmpeg
 
 PNG files are ready for `ffmpeg` to create videos with them in these folders:
 
@@ -114,6 +118,8 @@ Enter these with:
 ...etc.
 
 Once the -mov directories are created and populated, use this from the terminal inside that folder to create the video:
+
+(Of coruse, put whatever name you want for `moviename.mp4`, as long as it is an .mp4 file)
 
 `ffmpeg -y -framerate 30 -i %5d.png  -c:v libx264 -s:v 1920:1080 moviename.mp4`
 
@@ -137,7 +143,13 @@ Open it by double clicking on it in your file brower.
 
 Thanks [Yi Hui!][2] [https://github.com/yihui/animation/issues/74]
 
-## Notes:
+## X. Video editor
+
+I used Kdenlive to finish the video. You could probalby use any video editor to get the same or similar results, but you'll have to experiment to find out.
+
+The video is 1920x1080 30 fps with literally every .png image with its own frame in the video. IMHO, more fps would have been heavier and fewer would have been either a longer video or would have skipped frames.
+
+#### Notes on video editing:
 
 1. The video from `colors-real-wheel-mov/` is not part of the original video at the Ink Is A Verb YouTube Channel.
 2. The video from `colors-real-wheel-panel-mov/` must be inserted into the video from `rgb-panel-mov/`. Do this at about 10 seconds before the end of the `rgb-panel-mov/` video, when the numbers briefly pause at DD22DD. Use an editor such as Kdenlive for this. And, you must create a video file with 1080 pixels and 30 fps because that is what these videos are.
@@ -152,6 +164,6 @@ Thanks [Yi Hui!][2] [https://github.com/yihui/animation/issues/74]
 - Yi Hui (`ffmpeg` command examples)
 [2]: https://github.com/yihui/animation/issues/74
 
-- LYFO – High (Music)
+- LYFO – High (music)
 [3]: https://soundcloud.com/lyfomusic/high
 
