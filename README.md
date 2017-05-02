@@ -49,7 +49,7 @@ Dependencies, folder and files:
 - `colors/` must be populated from the Octave scripts.
 - `bin/` must be downloaded and unzipped.
 - `makergb` is used by `makergball`
-- `rgb-bin/` contains raw R - G - B .png transparencies that need to be composited with the panel frame.
+- `rgb-bin/` contains raw R-G-B .png transparencies that need to be composited with the panel frame.
 - `rgb-base/` contains the R-G-B transparencies from `rgb-bin/` composited with the panel frame, but have no solid colors.
 - `rgb-panel/` contains the R-G-B panel composites from `rgb-base/` AND has the solid colors on the left.
 
@@ -141,13 +141,17 @@ Thanks [Yi Hui!][2] [https://github.com/yihui/animation/issues/74]
 
 1. The video from `colors-real-wheel-mov/` is not part of the original video at the Ink Is A Verb YouTube Channel.
 2. The video from `colors-real-wheel-panel-mov/` must be inserted into the video from `rgb-panel-mov/`. Do this at about 10 seconds before the end of the `rgb-panel-mov/` video, when the numbers briefly pause at DD22DD. Use an editor such as Kdenlive for this. And, you must create a video file with 1080 pixels and 30 fps because that is what these videos are.
-3. I also made additional edits to the final video on YouTube. I simply inserted some images from the video directories (above) in Kdenlive to make the panel seem to pause.
+3. I also inserted some images from the `colors-real-wheel-panel-mov/` directory (via `pause-cheat` in `goodies/`) in Kdenlive to make the color chooser wheel jump to 24 standard colors around the wheel in the "grand finale". They were six frames per image, of course at 30 fps.
+4. For music, I used the extended remix from the SoundCloud download for *LYFO – High* [https://soundcloud.com/lyfomusic/high][3]. I made very few changes to the timing of the video to make it fit the music, using Kdenlive.
 
 ## Credits & Reference:
 
 - ImageMagickⓇ (`composite` command)
 [1]: https://www.imagemagick.org/script/index.php
 
-- Yi Hui (ffmpeg examples)
+- Yi Hui (`ffmpeg` command examples)
 [2]: https://github.com/yihui/animation/issues/74
+
+- LYFO – High (Music)
+[3]: https://soundcloud.com/lyfomusic/high
 
