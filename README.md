@@ -19,7 +19,7 @@ Look inside every script to see what is going on. The most-detailed explanation 
 
 ## Make sure you are working inside the folder
 
-`cd rgbvid`
+`cd rgb`
 
 ## Play with the bubble wrap
 
